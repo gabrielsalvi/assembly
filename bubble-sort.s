@@ -43,14 +43,12 @@ increment_count:
     	addi t1, t1, 1
     	j for
     	
-while: 	# while t0 (swapped) != 0 (false) go to do label
+while:
     	bne t0, zero, do
     	jr a5
-    	
-# end of f_ordena_1
 
 swap:
-	addi t0, zero, 1  # set swapped = 1 (true)
+	addi t0, zero, 1
     	sw  a0, 0(t3)
     	sw  a1, -4(t3)
     	j increment_count
@@ -89,4 +87,3 @@ print_array_value:
 	    	    	    	
 final:
 	nop
-	
