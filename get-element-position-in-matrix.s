@@ -6,7 +6,7 @@ str_number:    	.string "Buscar pelo número: "
 str_a0:		.string "a0 = "
 str_a1:		.string "a1 = "
 
-str_comma:     .string ", "
+str_comma:      .string ", "
 
     		.text
 main:
@@ -23,9 +23,6 @@ main:
    	
    	li a1, 4
    	li a2, 3
-   	
-  	li s1, -1
-  	li s2, -1
   	
   	jal f_numero_na_matriz
   	jal f_imprime
@@ -36,6 +33,9 @@ f_numero_na_matriz:
 	mv s5, a0
 	li a4, 0
 	
+	li s1, -1
+  	li s2, -1
+  	
 	jal t6, for_each_row
 	
 	add a0, s1, zero
